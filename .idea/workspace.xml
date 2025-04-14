@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1c66084-bc54-4b27-9323-d62ee61f27e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/process_data/augemt_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/process_data/load_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +48,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.augemt_data.executor": "Run",
+    "Python.config.executor": "Run",
+    "Python.data_loader.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.prep_data.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -52,6 +61,11 @@
     "last_opened_file_path": "C:/Users/vijay/Neuro_BioMark/ALS_BioMark_VJ"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vijay\Neuro_BioMark\ALS_BioMark_VJ" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
