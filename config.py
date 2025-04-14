@@ -1,19 +1,25 @@
+import torch
+
 class Config():
 
-    # path to the dataset
-    main_path = "./"
-    dataset_path = "dataset/AptamerROIs020623"
-    #label_path = "dataset/RoI Image Key.xlsx"
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"Using {device} device.")
+    device = torch.device(device)
 
-    # model config
+    seed = 9
     classification = "multi-classification" # can be binary-classification or multi-classification
+
     train_ratio = 0.6
     val_ratio = 0.2
     test_ratio = 0.2
-    epoch = 150
-    batch_size =150
+
+    epoch = 300
+    batch_size =64
     lr = 0.0001
-    seed = 9
+    weight_decay = 0.001
+
     model = "CNN"
+    criterion = None
+    optimizer = None
 
 config = Config()

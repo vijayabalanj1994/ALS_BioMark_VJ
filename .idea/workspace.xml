@@ -5,11 +5,242 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1c66084-bc54-4b27-9323-d62ee61f27e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/process_data/augemt_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/process_data/load_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/cnn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/process_data/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/10.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/10.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/100.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/100.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/101.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/101.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/102.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/102.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/103.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/103.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/104.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/104.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/105.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/105.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/106.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/106.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/107.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/107.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/109.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/109.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/11.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/11.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/111.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/111.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/115.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/115.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/118.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/118.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/119.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/119.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/12.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/12.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/120.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/120.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/121.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/121.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/122.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/122.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/124.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/124.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/126.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/126.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/128.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/128.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/129.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/129.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/13.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/13.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/133.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/133.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/134.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/134.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/135.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/135.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/136.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/136.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/137.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/137.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/138.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/138.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/14.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/14.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/143.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/143.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/15.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/15.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/152.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/152.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/153.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/153.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/154.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/154.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/155.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/155.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/157.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/157.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/16.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/16.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/160.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/160.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/161.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/161.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/162.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/162.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/163.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/163.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/166.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/166.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/167.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/167.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/168.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/168.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/17.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/17.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/170.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/170.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/172.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/172.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/175.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/175.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/179.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/179.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/18.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/18.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/181.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/181.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/184.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/184.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/185.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/185.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/186.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/186.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/187.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/187.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/189.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/189.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/19.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/19.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/190.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/190.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/2.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/2.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/20.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/20.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/21.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/21.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/22.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/22.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/23.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/23.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/27.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/27.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/31.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/31.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/32.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/32.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/33.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/33.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/34.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/34.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/35.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/35.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/36.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/36.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/37.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/37.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/38.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/38.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/39.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/39.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/42.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/42.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/43.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/43.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/45.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/45.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/47.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/47.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/5.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/5.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/50.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/50.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/51.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/51.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/52.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/52.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/54.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/54.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/55.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/55.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/56.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/56.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/57.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/57.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/60.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/60.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/61.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/61.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/64.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/64.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/67.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/67.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/68.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/68.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/69.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/69.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/7.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/7.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/70.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/70.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/71.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/71.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/72.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/72.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/73.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/73.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/76.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/76.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/77.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/77.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/8.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/8.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/81.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/81.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/84.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/84.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/85.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/85.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/87.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/87.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/88.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/88.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/89.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/89.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/9.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/9.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/91.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/91.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/93.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/93.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/94.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/94.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/95.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/95.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/96.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/96.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/99.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/noisy/99.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/10.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/10.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/100.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/100.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/101.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/101.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/102.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/102.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/103.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/103.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/104.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/104.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/105.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/105.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/106.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/106.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/107.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/107.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/109.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/109.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/11.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/11.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/111.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/111.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/115.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/115.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/118.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/118.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/119.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/119.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/12.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/12.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/120.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/120.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/121.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/121.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/122.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/122.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/124.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/124.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/126.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/126.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/128.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/128.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/129.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/129.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/13.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/13.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/133.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/133.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/134.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/134.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/135.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/135.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/136.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/136.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/137.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/137.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/138.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/138.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/14.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/14.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/143.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/143.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/15.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/15.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/152.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/152.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/153.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/153.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/154.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/154.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/155.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/155.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/157.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/157.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/16.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/16.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/160.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/160.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/161.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/161.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/162.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/162.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/163.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/163.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/166.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/166.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/167.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/167.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/168.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/168.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/17.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/17.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/170.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/170.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/172.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/172.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/175.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/175.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/179.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/179.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/18.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/18.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/181.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/181.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/184.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/184.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/185.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/185.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/186.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/186.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/187.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/187.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/189.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/189.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/19.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/19.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/190.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/190.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/2.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/2.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/20.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/20.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/21.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/21.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/22.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/22.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/23.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/23.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/27.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/27.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/31.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/31.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/32.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/32.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/33.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/33.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/34.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/34.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/35.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/35.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/36.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/36.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/37.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/37.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/38.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/38.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/39.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/39.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/42.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/42.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/43.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/43.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/45.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/45.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/47.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/47.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/5.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/5.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/50.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/50.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/51.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/51.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/52.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/52.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/54.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/54.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/55.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/55.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/56.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/56.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/57.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/57.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/60.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/60.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/61.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/61.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/64.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/64.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/67.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/67.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/68.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/68.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/69.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/69.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/7.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/7.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/70.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/70.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/71.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/71.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/72.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/72.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/73.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/73.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/76.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/76.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/77.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/77.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/8.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/8.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/81.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/81.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/84.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/84.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/85.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/85.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/87.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/87.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/88.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/88.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/89.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/89.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/9.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/9.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/91.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/91.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/93.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/93.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/94.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/94.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/95.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/95.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/96.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/96.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/99.tif" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/augmented_train_data/perspective_transformed/99.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_data/augemt_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_data/augemt_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_data/load_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_data/load_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,11 +280,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.augemt_data.executor": "Run",
+    "Python.cnn.executor": "Run",
     "Python.config.executor": "Run",
     "Python.data_loader.executor": "Run",
+    "Python.load_data.executor": "Run",
     "Python.main.executor": "Run",
     "Python.prep_data.executor": "Run",
     "Python.test.executor": "Run",
+    "Python.utils.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
