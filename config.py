@@ -18,8 +18,16 @@ class Config():
     lr = 0.0001
     weight_decay = 0.001
 
-    model = "CNN"
+    # data internal
+    img_w, img_h = 400, 400
+    train_loader = None
+    val_loader = None
+    test_loader = None
+
+    # model internal
+    model = None
     criterion = None
     optimizer = None
+    scheduler = None
 
 config = Config()

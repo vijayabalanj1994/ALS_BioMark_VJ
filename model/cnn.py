@@ -1,4 +1,6 @@
+import torch
 import torch.nn as nn
+from config import config
 
 class MultiCNNModel(nn.Module):
 
@@ -30,26 +32,24 @@ class MultiCNNModel(nn.Module):
             nn.Dropout(self.dropout_rate),
         )
 
-        # placeholders for fully connect layer, will be defined dynamically in forward method
-        self.fc_input_size =None
-        self.fc = None
+        # Dummy forward to get the output shape
+        with torch.no_grad():
+            dummy_input = torch.zeros(1,3,config.img_h, config.img_w)
+            cnn_out = self.cnn(dummy_input)
+            fc_input_size = cnn_out.view(1, -1).shape[1]
 
-    def forward(self, x):
-
-        x = self.cnn(x)
-
-        if not self.fc_input_size:
-            self.fc_input_size = x.size(1)* x.size(2) * x.size(3)
             self.fc = nn.Sequential(
-                nn.Linear(self.fc_input_size, 256),
+                nn.Linear(fc_input_size, 256),
                 nn.ReLU(),
                 nn.Dropout(self.dropout_rate),
                 nn.Linear(256, 50),
                 nn.ReLU(),
                 nn.Dropout(self.dropout_rate),
                 nn.Linear(50, 3)
-            ).to(x.device)
+            )
 
+    def forward(self, x):
+        x = self.cnn(x)
         x = self.flatten(x)
         x = self.fc(x)
         return x

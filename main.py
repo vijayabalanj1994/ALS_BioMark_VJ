@@ -7,7 +7,7 @@ from process_data.load_data import read_files, split_dataset, ALS_Dataset
 from process_data.augemt_data import augment_images
 from process_data.utils import gray_compute_mean_std
 from model.cnn import MultiCNNModel
-from model.utils import train, validate
+from model.utils import train_model, evaluate_model
 from config import config
 
 # reading the data files
@@ -33,15 +33,20 @@ val_dataset = ALS_Dataset(val_image_paths, val_labels, transform=transform)
 test_dataset = ALS_Dataset(test_image_paths, test_labels, transform=transform)
 
 # the dataloaders
-train_loader = DataLoader(train_dataset, batch_size=config.batch_size, shuffle=True)
-val_loader = DataLoader(val_dataset, batch_size=config.batch_size, shuffle=False)
-test_loader = DataLoader(test_dataset, batch_size=config.batch_size, shuffle=False)
+config.train_loader = DataLoader(train_dataset, batch_size=config.batch_size, shuffle=True)
+config.val_loader = DataLoader(val_dataset, batch_size=config.batch_size, shuffle=False)
+config.test_loader = DataLoader(test_dataset, batch_size=config.batch_size, shuffle=False)
 
 # CNN model
-model = MultiCNNModel().to(config.device)
+config.model = MultiCNNModel().to(config.device)
 config.criterion = nn.CrossEntropyLoss()
-config.optimizer = torch.optim.Adam(model.parameters(), lr=config.lr)
-scheduler = ReduceLROnPlateau(config.optimizer, mode='min', factor=0.5, patience=5, min_lr=0.00001)
+config.optimizer = torch.optim.Adam(config.model.parameters(), lr=config.lr)
+config.scheduler = ReduceLROnPlateau(config.optimizer, mode='min', factor=0.5, patience=5, min_lr=0.00001)
+#train_model()
+print("Loading trained model....")
+config.model.load_state_dict(torch.load("C:\\Users\\vijay\\Neuro_BioMark\\ALS_BioMark_VJ\\saved_models\\model_weights.pth", weights_only=True))
+print(".... Loaded")
+evaluate_model()
 
-train(model, train_loader)
-validate(model, val_loader)
+
+
