@@ -5,6 +5,9 @@ class Config():
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"Using {device} device.")
     device = torch.device(device)
+    # If using CUDA, print GPU name
+    if device.type == 'cuda':
+        print(f"CUDA Device Name: {torch.cuda.get_device_name(device)}")
 
     seed = 9
     classification = "multi-classification" # can be binary-classification or multi-classification
@@ -17,10 +20,10 @@ class Config():
     val_ratio = 0.2
     test_ratio = 0.2
 
-    epoch = 150
-    batch_size =64
-    lr = 0.0001
-    weight_decay = 0.008
+    epoch = 300
+    batch_size =128
+    lr = 0.0005
+    weight_decay = 0.0008
 
     # data internal
     img_w, img_h = 400, 400

@@ -7,7 +7,7 @@ from process_data.load_data import read_files, split_dataset, ALS_Dataset
 from process_data.augemt_data import augment_images
 from process_data.utils import gray_compute_mean_std
 from model.cnn import MultiCNNModel
-from model.resnet18 import PretrainedResNet18
+from model.resnet18 import PretrainedResNet18, SE_PretrainedResNet18
 from model.utils import train_model, evaluate_model
 from config import config
 
@@ -50,13 +50,18 @@ if config.model == "CNN":
     print(".... Loaded")
     evaluate_model()
 
-# ResNet18
-config.model = PretrainedResNet18().to(config.device)
+# PretrainedResNet18
+if config.model == "PretrainedResNet18":
+    config.model = PretrainedResNet18().to(config.device)
+    config.criterion = nn.CrossEntropyLoss()
+    config.optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, config.model.parameters()), lr=config.lr, weight_decay=config.weight_decay)
+    config.scheduler = ReduceLROnPlateau(config.optimizer, mode="min", factor=0.5, patience=5, min_lr=0.000001)
+    train_model()
+    evaluate_model()
+
+config.model = SE_PretrainedResNet18().to(config.device)
 config.criterion = nn.CrossEntropyLoss()
 config.optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, config.model.parameters()), lr=config.lr, weight_decay=config.weight_decay)
 config.scheduler = ReduceLROnPlateau(config.optimizer, mode="min", factor=0.5, patience=5, min_lr=0.000001)
 train_model()
 evaluate_model()
-
-
-
