@@ -20,10 +20,10 @@ class Config():
     val_ratio = 0.2
     test_ratio = 0.2
 
-    epoch = 300
+    epoch = 200
     batch_size =128
-    lr = 0.0005
-    weight_decay = 0.0008
+    lr = 0.0001
+    weight_decay = 0.008
 
     # data internal
     img_w, img_h = 400, 400
